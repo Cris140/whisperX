@@ -102,7 +102,7 @@ class FasterWhisperPipeline(Pipeline):
             tokenizer=None,
             device: Union[int, str, "torch.device"] = -1,
             framework = "pt",
-            language : Optional[str] = None,
+            language : "pt",
             suppress_numerals: bool = False,
             **kwargs
     ):
@@ -261,7 +261,7 @@ def load_model(whisper_arch,
                device_index=0,
                compute_type="float16",
                asr_options=None,
-               language : Optional[str] = None,
+               language : "pt",
                vad_model=None,
                vad_options=None,
                model : Optional[WhisperModel] = None,
